@@ -563,3 +563,62 @@ h2{
 .colaborador-logo:hover {
   transform: scale(1.1); /* Efecto de hover para agrandar los logos */
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para la sección específica del blog "5 Beneficios del Coaching" */
+.blog-5-benefits {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-5-benefits img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-5-benefits h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0077cc;
+}
+
+.blog-5-benefits article h2 {
+  font-size: 1.8rem;
+  color: #0077cc;
+  margin-top: 20px;
+}
+
+.blog-5-benefits article p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.blog-5-benefits a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.blog-5-benefits a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #666;
+}
