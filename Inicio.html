@@ -273,7 +273,7 @@
     <section id="contacto">
         <h2>¡Hablemos! Contacta sin compromiso</h2>
         <div class="contact-container">
-            <form class="contact-form">
+            <form class="contact-form" method="POST">
                 <div class="form-group">
                     <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" required>
@@ -329,8 +329,8 @@
     <footer>
       <p>&copy; 2024 CET Consulting Services. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="Script.js"></script>
-    <script src="EmailJS.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="Script.js" defer></script>
+    <script src="EmailJS.js" defer></script>
   </body>
 </html>
