@@ -1,0 +1,575 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #e6ebe0; /* Verde bosque claro */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  height: 120px; /* Suficiente espacio para los logos */
+}
+
+header h1 {
+  color: #264a29; /* Verde oscuro */
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 120px; /* Centra verticalmente el texto */
+}
+
+.logo-left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  height: 100px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+.logo-right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  height: 100px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+header img {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Alineado al lado derecho */
+  transform: translateY(-50%);
+  height: 70px; /* Ajusta la altura del logo */
+}
+
+nav {
+  position: sticky; /* Fija la barra de navegación en la parte superior */
+  
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la página */
+  background-color: #a7c3a0; /* Verde más claro */
+  padding: 10px ;
+  text-align: center;
+  z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+  padding: 10px; /* Agrega algo de relleno al pasar el ratón */
+  border-radius: 5px; /* Bordes redondeados para el efecto hover */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin-top: 60px; /* Ajusta este valor para que sea mayor que la suma de la altura del encabezado y la barra de navegación */
+}
+
+.welcome-text {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.welcome-text h2 {
+  color: #264a29;
+  font-size: 2em;
+}
+
+.welcome-text p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.logos img {
+  max-width: 100px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+}
+
+.carousel {
+  position: relative;
+  width: 90%; /* Ancho del carrusel aumentado */
+  max-width: 900px; /* Ancho máximo del carrusel */
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel img {
+  width: 90%;
+  height: auto; /* Ajuste automático del alto */
+  max-height: 1100px; /* Altura máxima de la imagen aumentada */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 10%; /* Ajuste para dejar más espacio en la parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 70%;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-text h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.carousel-text p {
+  font-size: 1.2em;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background-color: #264a29; /* Verde oscuro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+/* Estilos de las secciones */
+section {
+  padding: 100px 20px; /* Asegura que el contenido no quede pegado al borde */
+  margin-top: 60px; /* Espacio adicional para evitar que el contenido quede oculto debajo del menú fijo */
+}
+
+/* Opcional: Asegúrate de que las imágenes se ajusten dentro de las secciones */
+section img {
+  max-width: 100%;
+  height: auto;
+}
+/* Estilos para la sección de servicios */
+#servicios {
+  background-color: #e9f2e4; /* Color de fondo claro para la sección */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#servicios h2 {
+  color: #264a29; /* Color verde oscuro */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Adaptativo con 4 columnas */
+  gap: 20px; /* Espacio entre columnas */
+  max-width: 1200px; /* Ancho máximo de la cuadrícula */
+  margin: 0 auto; /* Centrar la cuadrícula */
+}
+
+.service-item {
+    background-color: #ffffff; /* Fondo blanco para cada item */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y la barra divisoria */
+}
+
+.service-item h3 {
+  color: #264a29; /* Color verde oscuro */
+  font-size: 1.8em;
+  margin: 20px 0 10px;
+}
+
+.service-item p {
+    font-family: cursive;
+  color: #333; /* Color del texto */
+  font-size: 1em;
+}
+
+/* Estilos para la sección del blog */
+#blog {
+  background-color: #e9f2e4; /* Fondo similar a la sección de servicios */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#blog h2 {
+  color: #264a29; /* Color verde oscuro */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adaptativo con columnas */
+  gap: 20px; /* Espacio entre columnas */
+  max-width: 1200px; /* Ancho máximo de la cuadrícula */
+  margin: 0 auto; /* Centrar la cuadrícula */
+}
+
+.blog-item {
+  background-color: #ffffff; /* Fondo blanco para cada item */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px;
+  text-align: left; /* Alineación izquierda para el contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-item img {
+  width: 100%; /* Ancho completo del contenedor */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+  margin-bottom: 15px; /* Espacio entre la imagen y el contenido */
+}
+
+.blog-content h3 {
+  color: #264a29; /* Color verde oscuro */
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.blog-content p {
+  color: #333; /* Color del texto */
+  font-size: 1em;
+  margin-bottom: 15px; /* Espacio entre el párrafo y el botón */
+}
+
+.read-more {
+  color: #586bad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+.divider {
+    height: 4px; /* Grosor de la línea */
+    background-color: #264a29; /* Color de la línea */
+    margin: 10px 0; /* Espacio vertical de 10px entre la imagen y la línea */
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+#sobre-mi {
+    background-color: #e9f2e4; /* Color de fondo claro para la sección */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#sobre-mi h2 {
+    color: #264a29; /* Color verde oscuro */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el logo en una columna */
+    align-items: center; /* Centra los elementos dentro de la columna */
+    gap: 90px; /* Espacio entre la imagen y el logo */
+    margin-right: 20px; /* Espacio entre la columna y el texto */
+}
+
+.about-image {
+    width: 290px; /* Tamaño del contenedor redondo */
+    height: 320px; /* Tamaño del contenedor redondo */
+    border-radius: 50%; /* Hace que el contenedor sea redondo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen fuera del círculo */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    background-color: #e0e0e0; /* Color de fondo opcional */
+}
+
+.about-image img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+}
+
+.logo {
+    margin-bottom: 20px; /* Espacio entre el logo y el texto */
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.about-text {
+    max-width: 600px; /* Ajusta el ancho del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los títulos de Misión, Visión y Valores */
+.about-text h4 {
+    color: green; /* Color verde */
+    font-weight: bold; /* Texto más grueso */
+    margin-top: 20px; /* Margen superior para separar del texto anterior */
+    margin-bottom: 10px; /* Margen inferior para separar del texto siguiente */
+}
+
+/* Estilo para la lista de valores */
+.about-text ul {
+    list-style-type: none; /* Quita las viñetas por defecto */
+    padding-left: 0; /* Quita el espacio de padding a la izquierda */
+}
+
+.about-text ul li {
+    margin-bottom: 5px; /* Espacio entre los valores */
+    line-height: 1.6; /* Altura de línea para mayor legibilidad */
+}
+#contacto {
+    padding: 20px;
+    background-color: #e7f5e3;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-checkbox-group {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #748f6f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #586bad;
+}
+
+.contact-info {
+    width: 35%;
+    color: #666;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+h2{
+
+    text-align: center;
+}
+.carousel-item img[src="1.jpeg"] {
+  width: 80%;
+  height: auto;
+}
+
+.quote-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4; /* Fondo suave para destacar la frase */
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.quote-container {
+  font-style:italic;
+  font-size: 1.6em;
+  color: #0b5f17;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-container p {
+  margin: 0;
+}
+#colaboradores {
+  background-color: #fafafa; /* Color de fondo suave */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.colaboradores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.colaboradores-container h2 {
+  font-size: 2.5em;
+  color: #264a29; /* Verde oscuro */
+  margin-bottom: 30px;
+}
+
+.colaboradores-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px; /* Espacio entre los logos */
+}
+
+.colaborador-logo {
+  height: 80px; /* Tamaño de los logos */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.colaborador-logo:hover {
+  transform: scale(1.1); /* Efecto de hover para agrandar los logos */
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+
+

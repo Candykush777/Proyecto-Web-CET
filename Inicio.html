@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Principal - Coach</title>
-    <link href="Stylo.css" rel="stylesheet" type="text/css" />
+    <link href="./css/Stylo.css" rel="stylesheet" type="text/css" />
+    <script src="./js/Script.js" defer></script> <!-- estar atento a ver que efecto hace defer y sinos interesa -->
+     <script src="./js/EmailJS.js" defer></script> 
   </head>
   <body>
     <header>
-      <img src="Logo-CET.jpeg" alt="Logo Izquierda" class="logo-left" />
+      <img src="./Logos/Logo-CET.jpeg" alt="Logo Izquierda" class="logo-left" />
       <h1>CET Consulting Services</h1>
-      <img src="Logo-CET.jpeg" alt="Logo Derecha" class="logo-right" />
+      <img src="./Logos/Logo-CET.jpeg" alt="Logo Derecha" class="logo-right" />
     </header>
 
     <nav>
@@ -24,7 +26,7 @@
     <div id="Inicio" class="container">
       <div class="carousel">
         <div class="carousel-item active">
-          <img src="1.jpeg" alt="Foto 1" />
+          <img src="./images/1.jpeg" alt="Foto 1" />
           <div class="carousel-text">
             <h2>Bienvenido a CET Consulting Services (COACH)</h2>
             <p>
@@ -33,21 +35,21 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="conferencia 1.jpg" alt="Foto 2" />
+          <img src="./images/conferencia 1.jpg" alt="Foto 2" />
           <div class="carousel-text">
             <h2>Coaching para empresas grupal e individual</h2>
             <p>Te acompaño en tu proceso de reinvención.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="coaching grupal 2.jpg" alt="Foto 3" />
+          <img src="./images/coaching grupal 2.jpg" alt="Foto 3" />
           <div class="carousel-text">
             <h2>Sesiones de coaching grupal</h2>
             <p>Te acompaño en tu proceso de reinvención.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="2.jpeg" alt="Foto 3" />
+          <img src="./images/2.jpeg" alt="Foto 4" />
           <div class="carousel-text">
             <h2>Sesiones de coaching online</h2>
             <p>Te acompaño en tu proceso de reinvención.</p>
@@ -64,7 +66,7 @@
       <h2>Servicios</h2>
       <div class="services-grid">
         <div class="service-item">
-          <img src="coaching ind.jpg" alt="Coaching 1:1" />
+          <img src="./images/coaching ind.jpg" alt="Coaching 1:1" />
           <div class="divider"></div>
           <!-- Barra divisoria -->
           <h3>Coaching 1:1</h3>
@@ -81,7 +83,7 @@
           
         </div>
         <div class="service-item">
-          <img src="coaching grupal.jpg" alt="Coaching Grupal" />
+          <img src="./images/coaching grupal.jpg" alt="Coaching Grupal" />
           <div class="divider"></div>
           <!-- Barra divisoria -->
           <h3>Coaching Grupal</h3>
@@ -95,7 +97,7 @@
           </p>
         </div>
         <div class="service-item">
-          <img src="mentoría.jpg" alt="Mentoría para Coaches" />
+          <img src="./images/mentoría.jpg" alt="Mentoría para Coaches" />
           <div class="divider"></div>
           <!-- Barra divisoria -->
           <h3>Mentoría para Coaches</h3>
@@ -104,10 +106,10 @@
             Coaching Federation (ICF) para solicitar o renovar tu credencial
             ACC.
           </p>
-          <img src="CredentialBadges_ACC_Grey.png" alt="Mentoría para Coaches" />
+          <img src="./images/CredentialBadges_ACC_White.png" alt="Mentoría para Coaches" />
         </div>
         <div class="service-item">
-          <img src="conferencia 2.jpg" alt="Conferencias" />
+          <img src="./images/conferencia 2.jpg" alt="Conferencias" />
           <div class="divider"></div>
           <!-- Barra divisoria -->
           <h3>Conferencias</h3>
@@ -136,9 +138,9 @@
       <div class="colaboradores-container">
         <h2>Colaboradores</h2>
         <div class="colaboradores-logos">
-          <img src="Modern_Health_Logo.jpg" alt="Colaborador 1" class="colaborador-logo" />
-          <img src="CGS logo.png" alt="Colaborador 2" class="colaborador-logo" />
-          <img src="Logo ICIPR.jpg" alt="Colaborador 3" class="colaborador-logo" />
+          <img src="./Logos/Modern_Health_Logo.jpg" alt="Colaborador 1" class="colaborador-logo" />
+          <img src="./Logos/CGS logo.png" alt="Colaborador 2" class="colaborador-logo" />
+          <img src="./Logos/Logo ICIPR.jpg" alt="Colaborador 3" class="colaborador-logo" />
           <!-- Añade más logos si es necesario -->
         </div>
       </div>
@@ -148,10 +150,10 @@
       <div class="about-container">
         <div class="about-info">
           <div class="about-image">
-            <img src="6.jpeg" alt="Foto de perfil" />
+            <img src="./images/6.jpeg" alt="Foto de perfil" />
           </div>
           <div class="logo">
-            <img src="CredentialBadges_ACC.jpg" alt="Logo" />
+            <img src="./Logos/CredentialBadges_ACC.jpg" alt="Logo" />
           </div>
         </div>
        
@@ -200,54 +202,54 @@
       <h2>Últimos posts sobre coaching...</h2>
       <div class="blog-grid">
         <div class="blog-item">
-          <img src="Beneficios del Coaching (1).jpg" alt="5 Beneficios del Coaching">
+          <img src="./images/Beneficios del Coaching (1).jpg" alt="5 Beneficios del Coaching">
           <div class="blog-content">
             <h3>5 Beneficios del Coaching</h3>
             <p>Porque creo fielmente en que lo Bueno Se Comparte, en esta ocasión te comento
               sobre algunos de los beneficios que puedes obtener al vivir un proceso de Coaching.
               Recuerda que para conocer qué es y qué no es Coaching puedes ir al artículo...</p>
-            <a href="blog.5Beneficios.html" class="read-more">Read More &gt;</a>
+            <a href="./Blogs/blog.5Beneficios.html" class="read-more">Read More &gt;</a>
           </div>
         </div>
         <div class="blog-item">
-          <img src="coaching ind.jpg" alt="Qué es el Coaching Profesional">
+          <img src="./images/coaching ind.jpg" alt="Qué es el Coaching Profesional">
           <div class="blog-content">
             <h3>Qué es el Coaching Profesional</h3>
             <p>A los Coaches nos gusta comenzar a definir lo que es Coaching diciendo lo que no es.
               Por lo que este blog comienza así…</p>
-            <a href="coachingPro.html" class="read-more">Read More &gt;</a>
+            <a href="./Blogs/coachingPro.html" class="read-more">Read More &gt;</a>
           </div>
         </div>
         <div class="blog-item">
-          <img src="Liderazgo.jpg" alt="Título del blog 2">
+          <img src="./images/Liderazgo.jpg" alt="Título del blog 2">
           <div class="blog-content">
             <h3>Liderazgo</h3>
             <p>En esta ocasión, quisiera comenzar por definir la palabra líder o liderazgo. En la
               búsqueda de una definición, encontré diez (10) maneras de definir el arte de liderar...</p>
-            <a href="liderazgo.html" class="read-more">Read More &gt;</a>
+            <a href="./Blogs/liderazgo.html" class="read-more">Read More &gt;</a>
           </div>
         </div>
         <div class="blog-item">
-          <img src="Trabajo en equipo.jpg" alt="Título del blog 2">
+          <img src="./images/Trabajo en equipo.jpg" alt="Título del blog 2">
           <div class="blog-content">
             <h3>Trabajo en Equipo</h3>
             <p>Debemos comenzar por definir lo que es trabajo en equipo. Existen varias definiciones,
               sin embargo, básicamente todas coinciden en lo siguiente...</p>
-            <a href="trabajoEquipo.html" class="read-more">Read More &gt;</a>
+            <a href="./Blogs/trabajoEquipo.html" class="read-more">Read More &gt;</a>
           </div>
         </div>
         <div class="blog-item">
-          <img src="Estrategias de colaboración.jpg" alt="Título del blog 2">
+          <img src="./images/Estrategias de colaboración.jpg" alt="Título del blog 2">
           <div class="blog-content">
             <h3>Estrategias de Colaboración</h3>
             <p>Las metodologías de agilidad nos permiten ser más colaborativos en nuestros
               entornos. Entre ellas, se puede mencionar el tablero de Kanban. A continuación, los
               pasos para implementar esta estrategia...</p>
-            <a href="Estrategias.html" class="read-more">Read More &gt;</a>
+            <a href="./Blogs/Estrategias.html" class="read-more">Read More &gt;</a>
           </div>
         </div>
         <div class="blog-item">
-          <img src="Agilidad.jpg" alt="Título del blog 2">
+          <img src="./images/Agilidad.jpg" alt="Título del blog 2">
           <div class="blog-content">
             <h3>Agilidad</h3>
             <p>La Agilidad se refiere a la capacidad de ser flexible, de cambiar, de innovar y de
@@ -257,7 +259,7 @@
           </div>
         </div>
         <div class="blog-item">
-          <img src="Estrategias de colaboración.jpg" alt="Título del blog 2">
+          <img src="./images/Estrategias de colaboración.jpg" alt="Título del blog 2">
           <div class="blog-content">
             <h3>Coaching Organizacional</h3>
             <p>El Coaching Organizacional se refiere a la gestión de acompañar al capital humano de
@@ -311,10 +313,10 @@
                 </div>
                 <button type="submit">ENVIAR</button>
             </form>
-            <div class="contact-info">
+            <div class="contact-info"><br><br>
                 <p><strong>CRISTAL ESPADAS TORRES</strong></p>
                 <p>28005 MADRID</p>
-                <p>(+34) 676 614 377</p>
+                <p>(+34) xxx</p>
                 <p><a href="mailto:cet.consultingservices@gmail.com">cet.consultingservices@gmail.com</a></p>
                 <div class="social-icons">
                     <a href="#"><img src="facebook.svg" alt="Facebook"></a>
@@ -330,7 +332,7 @@
       <p>&copy; 2024 CET Consulting Services. Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="Script.js" defer></script>
-    <script src="EmailJS.js" defer></script>
+    <!-- <script src="Script.js" defer></script>
+    <script src="EmailJS.js" defer></script>  -->
   </body>
 </html>
