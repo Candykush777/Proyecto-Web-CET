@@ -304,6 +304,8 @@ section img {
   font-family: 'Arial Narrow Bold';
   color: #333; /* Color del texto */
   font-size: 1.2em;
+  font-weight: normal;
+  
 }
 
 .btn {
@@ -553,12 +555,12 @@ justify-content: center;
     margin-top: 20px; /* Margen superior para separar del texto anterior */
     margin-bottom: 10px; /* Margen inferior para separar del texto siguiente */
 }
+.about-text p {
+  font-weight: normal; /* Restablece el peso de la fuente a normal */
+}
 
 /* Estilo para la lista de valores */
-.about-text ul {
-    list-style-type: none; /* Quita las viñetas por defecto */
-    padding-left: 0; /* Quita el espacio de padding a la izquierda */
-}
+
 
 .about-text ul li {
     margin-bottom: 5px; /* Espacio entre los valores */
