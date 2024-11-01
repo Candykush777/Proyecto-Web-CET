@@ -142,13 +142,41 @@ nav a:hover {
   display: block;
 }
 
-.carousel img {
+/*.carousel img {
   width: 90%;
-  height: auto; /* Ajuste automático del alto */
-  max-height: 1100px; /* Altura máxima de la imagen aumentada */
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-  border-radius: 10px; /* Bordes redondeados */
+  height: auto; /* Ajuste automático del alto 
+  max-height: 1100px; /* Altura máxima de la imagen aumentada 
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla 
+  border-radius: 10px; /* Bordes redondeados 
+}*/
+.imgcarrusel1 {
+  width: 100%; /* Mantiene el ancho al 100% del contenedor */
+  height: 900px; /* Ajusta la altura a 900px */
+  object-fit: cover; /* Mantiene la relación de aspecto */
+  border-radius: 10px;
 }
+.imgcarrusel2{
+
+  width: 100%; /* O el valor que desees */
+      height: 600px; /* Establece una altura fija */
+      object-fit: cover; /* Mantiene la relación de aspecto */
+      border-radius: 10px;
+  
+  }
+  .imgcarrusel3{
+
+    width: 100%; /* O el valor que desees */
+    height: 600px; /* Establece una altura fija */
+    object-fit: cover; /* Mantiene la relación de aspecto */
+    border-radius: 10px;
+    
+    }
+    .imgcarrusel4 {
+      width: 100%; /* O el valor que desees */
+      height: 600px; /* Establece una altura fija */
+      object-fit: cover; /* Mantiene la relación de aspecto */
+      border-radius: 10px;
+  }
 
 .carousel-text {
   position: absolute;
@@ -229,6 +257,12 @@ section img {
   margin-bottom: 20px;
 }
 
+.mentor-image {
+  transform: scale(0.5); /* Reduce el tamaño al 50% */
+  transform-origin: center; /* Centra el punto de transformación */
+}
+
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(
@@ -253,10 +287,10 @@ section img {
 }
 
 .service-item img {
-    width: 100%; /* Ancho completo del contenedor */
-    height: 200px; /* Altura fija para todas las imágenes */
+    width: 100%; 
+    height: 200px; 
     object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
-    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    border-radius: 10px; 
     margin-bottom: 10px; /* Espacio entre la imagen y la barra divisoria */
 }
 
@@ -267,10 +301,111 @@ section img {
 }
 
 .service-item p {
-    font-family: cursive;
+  font-family: 'Arial Narrow Bold';
   color: #333; /* Color del texto */
-  font-size: 1em;
+  font-size: 1.2em;
 }
+
+.btn {
+  display: inline-block; /* Para que se comporte como un botón */
+  padding: 10px 20px; /* Espaciado interno */
+  margin-top: 10px; /* Espaciado superior */
+  background-color:#686e74 ; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave */
+  border: 2px solid black; /* Borde negro, ajusta el grosor según sea necesario */
+  /* Añadiendo borde al texto */
+  text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Efecto de borde en el texto */
+  
+}
+/* boton dentro conferencias  */
+.btn:hover {
+  background-color:#007BFF ; /* Color de fondo al pasar el mouse */
+}
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo en la pantalla */
+  z-index: 1000; /* Por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Habilitar scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Margen superior y centrado */
+  padding: 20px;
+  border: 4px solid #888;
+  width: 90%; /* Ancho del modal */
+  max-width: 800px; /* Ancho máximo */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1; /* Todas las columnas tendrán el mismo ancho */
+  margin: 10px; /* Espaciado entre columnas */
+  text-align: center; /* Centrar texto */
+}
+.compromiso{
+
+  color: gray; /* Texto en gris */
+
+}
+.sesionGris{
+  color: gray; /* Texto en gris */
+}
+
+.pidecita{
+
+  color:#264a29
+
+}
+.citapide{
+
+  color: #666;
+}
+
+.price {
+  font-size: 2em; /* Tamaño de fuente grande */
+}
+
+.reduced {
+  color: red; /* Color rojo para el precio reducido */
+}
+
+.note {
+  color: gray; /* Texto en gris */
+}
+
 
 /* Estilos para la sección del blog */
 #blog {
@@ -323,6 +458,7 @@ section img {
   color: #333; /* Color del texto */
   font-size: 1em;
   margin-bottom: 15px; /* Espacio entre el párrafo y el botón */
+  font-family: 'Arial Narrow Bold', 
 }
 
 .read-more {
@@ -351,6 +487,14 @@ section img {
     color: #264a29; /* Color verde oscuro */
     font-size: 2.5em;
     margin-bottom: 20px;
+}
+.Sobrelogo img{
+  align-items: center;
+display: auto;
+justify-content: center;
+
+
+
 }
 
 .about-container {
@@ -399,6 +543,7 @@ section img {
 .about-text {
     max-width: 600px; /* Ajusta el ancho del texto */
     text-align: left; /* Alinea el texto a la izquierda */
+    align-items: center;
 }
 
 /* Estilo para los títulos de Misión, Visión y Valores */
@@ -507,10 +652,10 @@ h2{
 
     text-align: center;
 }
-.carousel-item img[src="1.jpeg"] {
+/* .carousel-item img[src="1.jpeg"] {
   width: 80%;
   height: auto;
-}
+} */
 
 .quote-section {
   text-align: center;
@@ -570,6 +715,7 @@ h2{
   padding: 0;
   box-sizing: border-box;
 }
+
  
 
 
