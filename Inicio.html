@@ -8,6 +8,7 @@
     <script src="./js/Script.js" defer></script> <!-- estar atento a ver que efecto hace defer y sinos interesa -->
      <script src="./js/EmailJS.js" defer></script> 
      <script src="./js/Script_precios.js" defer></script>
+     <script src="js/Google.js" defer></script>
   </head>
   <body>
     <header>
@@ -210,7 +211,7 @@
             </p>
             <div class="Sobrelogo">
             <img src="./Logos/neurometa.png" alt="neurometa">
-            <img src="./Logos/neuroherramientas.jpg"  alt="neuroherramientas" >
+            <img src="./Logos/neuroherramientas.jpg"  alt="neuroherramientas" id="neuro">
             <img src="./Logos/bienestar.png" alt="neurometa">
           </div><br>
             <h4>Misión</h4>
@@ -230,6 +231,25 @@
         </div>
         
     </div>
+    </section>
+    <section id="google-reviews">
+      <div id="reseñas">
+      <h2>Reseñas de Google</h2>
+    </div>
+      
+      <!-- Carrusel de imágenes -->
+      <div class="carousel2">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <img class="carousel-item2" src="reseña1.jpeg" alt="Reseña 1">
+        <img class="carousel-item2" src="reseña2.jpeg" alt="Reseña 2">
+        <img class="carousel-item2" src="reseña3.jpeg" alt="Reseña 3">
+        <img class="carousel-item2" src="reseña4.jpeg" alt="Reseña 4">
+        
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+      
+      <!-- Enlace para dejar reseña -->
+      <p><a href="https://g.page/r/CUgIRwOq4xPNEBM/review" target="_blank">Deja tu reseña aquí</a></p>
     </section>
     <section id="blog" class="blog-section">
       <h2>Últimos posts sobre ...</h2>
@@ -352,10 +372,10 @@
                 <p>(+34) 614 25 63 59</p>
                 <p><a href="mailto:cet.consultingservices@gmail.com">cet.consultingservices@gmail.com</a></p>
                 <div class="social-icons">
-                    <a href="#"><img src="facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
-                    <a href="#"><img src="mail.svg" alt="Email"></a>
+                    <a href="https://www.facebook.com/cetconsultingservices/services"><img src="facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/cet.consultingservices"><img src="instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/cristal-espada-39592b80/"><img src="linkedin.svg" alt="LinkedIn"></a>
+                    <a href="cet.consultingservices@gmail.com"><img src="mail.svg" alt="Email"></a>
                 </div>
             </div>
         </div>
@@ -370,6 +390,7 @@
         
     </p>
     </footer>
+    
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <!-- <script src="Script.js" defer></script>
     <script src="EmailJS.js" defer></script>  -->

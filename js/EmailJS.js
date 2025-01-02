@@ -1,9 +1,5 @@
 // Inicializa EmailJS con tu User ID
-emailjs.init('CETConsulting'); // Reemplaza 'YOUR_USER_ID' con tu User ID de EmailJS
-
-
-
-//ESTO TENGO QUE MODIFICARLO XQ CUANDO ESTE EL HOSTING YA FUNCIONARA CORRECTAMENTE Y ES MUCHO MAS SIMPLE
+emailjs.init('CETConsulting'); // Reemplaza 'CETConsulting' con tu User ID de EmailJS
 
 // Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,17 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Crear un objeto FormData a partir del formulario
         const formData = new FormData(this);
 
-        // Obtener todos los métodos de contacto seleccionados
-        const contactMethod = formData.getAll('contact_method').join(', '); // Unir los métodos seleccionados con una coma y un espacio
-
-        // Obtener los demás valores del formulario
+        // Obtener los valores del formulario
         const data = {
             name: formData.get('name'),
             phone: formData.get('phone'),
             email: formData.get('email'),
             message: formData.get('message'),
-            contact_method: contactMethod,
-            offers: formData.get('offers') ? 'Sí' : 'No', // Si el checkbox está marcado, asignar 'Sí', si no, 'No'
+            contact_method: formData.getAll('contact_method').join(', '), // Métodos de contacto seleccionados
+            offers: formData.get('offers') ? 'Sí' : 'No', // Si el checkbox está marcado, asignar 'Sí'
             privacy: formData.get('privacy') ? 'Sí' : 'No' // Lo mismo para el checkbox de privacidad
         };
 
@@ -39,4 +32,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
+
 

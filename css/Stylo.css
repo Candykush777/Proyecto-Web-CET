@@ -48,6 +48,7 @@ header img {
   right: 20px; /* Alineado al lado derecho */
   transform: translateY(-50%);
   height: 70px; /* Ajusta la altura del logo */
+  border-radius: 20px;
 }
 
 nav {
@@ -71,7 +72,7 @@ nav a {
 
 nav a:hover {
   background-color: #555; /* Cambia el color de fondo al pasar el ratón */
-  padding: 10px; /* Agrega algo de relleno al pasar el ratón */
+  /* padding: 10px; */ /* Agrega algo de relleno al pasar el ratón */
   border-radius: 5px; /* Bordes redondeados para el efecto hover */
 }
 
@@ -494,9 +495,15 @@ section img {
   align-items: center;
 display: auto;
 justify-content: center;
+width: 30%;
+margin-left: 10px;
 
 
 
+}
+#neuro{
+
+  width: 30%;
 }
 
 .about-container {
@@ -717,6 +724,93 @@ h2{
   padding: 0;
   box-sizing: border-box;
 }
+
+#google-reviews {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Estilos del carrusel */
+.carousel2 {
+  position: relative;
+  width: 100%;
+  height: auto; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.carousel-item2 {
+  display: none;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item2.active {
+  display: block;
+}
+.carousel2 img {
+  width: 100%;  
+  height: auto;
+  max-width: 500px; 
+  object-fit: cover;
+  border-radius: 20px;
+}
+.carousel2 button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel2 button.prev {
+  left: 10px; /* Ajustar la posición izquierda */
+}
+
+.carousel2 button.next {
+  right: 10px; /* Ajustar la posición derecha */
+}
+
+.carousel2 button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+}
+
+
+#google-reviews a {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 20px 40px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  border: solid black 3px;
+}
+#google-reviews h2{
+
+  margin: 0 0 50px; /* Ajustar margen superior e inferior */
+  font-size: 34px; /* Tamaño del texto */
+
+}
+
+#google-reviews a:hover {
+  background-color:   #4baed4;
+}
+
+
+
 
  
 
