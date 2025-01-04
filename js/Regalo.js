@@ -1,5 +1,5 @@
 // Inicialización de EmailJS
-emailjs.init("CETConsulting"); // Reemplaza con tu User ID de EmailJS
+emailjs.init("CETConsulting"); 
 
 // Función para abrir el formulario
 function openForm() {
@@ -19,7 +19,7 @@ function submitForm() {
   const privacyPolicy = document.getElementById("privacyPolicy").checked;
 
   if (name && email && offers && privacyPolicy) {
-    emailjs
+    email //revisar por sino funciona estaba puesto emailjs
       .send("service_ybw5bdl", "template_8o0pswl", {
         from_name: name,
         email: email,

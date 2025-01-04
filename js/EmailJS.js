@@ -1,5 +1,5 @@
 // Inicializa EmailJS con tu User ID
-emailjs.init('CETConsulting'); // Reemplaza 'CETConsulting' con tu User ID de EmailJS
+emailjs.init('CETConsulting'); // User de EmailJS
 
 // Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {

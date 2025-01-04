@@ -1,8 +1,7 @@
 
-    // Obtener el modal
     let modal = document.getElementById("infoModal");
 
-    // Obtener el botón que abre el modal
+    
     let btn = document.getElementById("openModal");
 
     // Obtener el elemento <span> que cierra el modal
