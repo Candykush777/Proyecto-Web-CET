@@ -6,6 +6,7 @@
     <title>Página Principal - Coach</title>
     <link href="./css/Stylo.css" rel="stylesheet" type="text/css" />
     <script src="./js/Script.js" defer></script> <!-- estar atento a ver que efecto hace defer y sinos interesa -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
      <script src="./js/EmailJS.js" defer></script> 
      <script src="./js/Script_precios.js" defer></script>
      <script src="./js/Google.js" defer></script>
@@ -325,46 +326,46 @@
     </section>
 
     <section id="contacto">
-        <h2>¡Hablemos! Contacta sin compromiso</h2>
-        <div class="contact-container">
-            <form class="contact-form" method="POST">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Teléfono</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Cuéntame!</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label>¿Cómo quieres que te responda?</label>
-                    <div class="form-checkbox-group">
-                        <input type="checkbox" id="telefono" name="contact_method" value="telefono">
-                        <label for="telefono">Teléfono</label>
-                        <input type="checkbox" id="whatsapp" name="contact_method" value="whatsapp">
-                        <label for="whatsapp">WhatsApp</label>
-                        <input type="checkbox" id="mail" name="contact_method" value="mail">
-                        <label for="mail">Mail</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" id="offers" name="offers">
-                    <label for="offers">Acepto recibir información sobre ofertas y cursos</label>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">He leído y acepto política de privacidad</label>
-                </div>
-                <button type="submit">ENVIAR</button>
-            </form>
+      <h2>¡Hablemos! Contacta sin compromiso</h2>
+      <div class="contact-container">
+          <form class="contact-form" id="form" method="POST">
+              <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Cuéntame!</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="form-group">
+                  <label>¿Cómo quieres que te responda?</label>
+                  <div class="form-checkbox-group">
+                      <input type="checkbox" id="telefono" name="contact_method_telefono" value="telefono">
+                      <label for="telefono">Teléfono</label>
+                      <input type="checkbox" id="whatsapp" name="contact_method_whatsapp" value="whatsapp">
+                      <label for="whatsapp">WhatsApp</label>
+                      <input type="checkbox" id="mail" name="contact_method_mail" value="mail">
+                      <label for="mail">Mail</label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <input type="checkbox" id="offers" name="offers">
+                  <label for="offers">Acepto recibir información sobre ofertas y cursos</label>
+              </div>
+              <div class="form-group">
+                  <input type="checkbox" id="privacy" name="privacy" required>
+                  <label for="privacy">He leído y acepto política de privacidad</label>
+              </div>
+              <button type="submit">ENVIAR</button>
+          </form>
             <div class="contact-info"><br><br>
                 <p><strong>CRISTAL ESPADA TORRES</strong></p>
                 <p>28005 MADRID</p>
@@ -374,7 +375,7 @@
                     <a href="https://www.facebook.com/cetconsultingservices/services"><img src="facebook.svg" alt="Facebook"></a>
                     <a href="https://www.instagram.com/cet.consultingservices"><img src="instagram.svg" alt="Instagram"></a>
                     <a href="https://www.linkedin.com/in/cristal-espada-39592b80/"><img src="linkedin.svg" alt="LinkedIn"></a>
-                    <a href="cet.consultingservices@gmail.com"><img src="mail.svg" alt="Email"></a>
+                    <a href="mailto:cet.consultingservices@gmail.com"><img src="mail.svg" alt="Email"></a>
                 </div>
             </div>
         </div>
@@ -390,7 +391,7 @@
     </p>
     </footer>
     
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
     <!-- <script src="Script.js" defer></script>
     <script src="EmailJS.js" defer></script>  -->
   </body>

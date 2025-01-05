@@ -1,46 +1,72 @@
-// Inicialización de EmailJS
-emailjs.init("CETConsulting"); 
-
-// Función para abrir el formulario
+// Función para abrir el formulario emergente
 function openForm() {
-  document.getElementById("popupForm").style.display = "flex";
+  document.getElementById("popupForm").style.display = "block";
 }
 
-// Función para cerrar el formulario
+// Función para cerrar el formulario emergente
 function closeForm() {
   document.getElementById("popupForm").style.display = "none";
 }
 
-// Función para enviar el formulario
-function submitForm() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const offers = document.getElementById("offers").checked;
-  const privacyPolicy = document.getElementById("privacyPolicy").checked;
+// Inicializa EmailJS con tu Public Key
+emailjs.init('M_PnXzVM2pdJ79IgP');
 
-  if (name && email && offers && privacyPolicy) {
-    email //revisar por sino funciona estaba puesto emailjs
-      .send("service_ybw5bdl", "template_8o0pswl", {
-        from_name: name,
-        email: email,
-      })
-      .then(
-        (response) => {
-          console.log("¡Correo enviado con éxito!", response.status, response.text);
-          document.getElementById("popupForm").style.display = "none";
-          document.getElementById("regalo").style.display = "block";
-          document.getElementById("regaloNav").style.display = "none";
-          document.getElementById("regaloImagen").style.display = "none";
-        },
-        (error) => {
-          console.error("Error al enviar el correo:", error);
-          alert("Hubo un problema al enviar el correo. Inténtalo de nuevo.");
-        }
-      );
+// Obtener el formulario por su ID
+const form = document.getElementById('contactForm');  // Aquí cambiamos a #contactForm
+
+// Agregar el evento de envío al formulario
+form.addEventListener('submit', function(event) {
+  event.preventDefault();  // Evita que se recargue la página al enviar el formulario
+  
+  // Verificamos si los checkboxes están seleccionados
+  const offersChecked = document.getElementById('offers').checked;
+  const privacyChecked = document.getElementById('privacyPolicy').checked;
+
+  if (!offersChecked || !privacyChecked) {
+    alert('Debes aceptar los términos y condiciones para recibir el regalo.');
+    return;  // Detenemos el envío si no se cumplen los requisitos
+  }
+
+  const btn = form.querySelector('button');
+  toggleButtonState(btn, true);  // Deshabilitar el botón y cambiar su texto
+
+  // IDs del servicio y el template de EmailJS
+  const serviceID = 'default_service';
+  const templateID = 'template_hw8mb6l';
+  
+  // Enviar el formulario con EmailJS
+  emailjs.sendForm(serviceID, templateID, form)
+      .then(() => {
+          toggleButtonState(btn, false);  // Restablecer el estado del botón
+          alert('¡Correo enviado con éxito!');
+          
+          // Ocultar el formulario y mostrar el PDF
+          closeForm();  // Cierra el formulario emergente
+          document.getElementById("regalo").style.display = "block";  // Mostrar el regalo
+
+      }, (err) => {
+          toggleButtonState(btn, false);  // Restablecer el estado del botón
+          alert('Error al enviar el correo: ' + JSON.stringify(err));
+      });
+});
+
+// Función para manejar el estado del botón (activar/desactivar)
+function toggleButtonState(button, isSending) {
+  if (isSending) {
+    button.textContent = 'Sending...';  // Cambia el texto a 'Sending...'
+    button.disabled = true;  // Deshabilita el botón mientras se envía
   } else {
-    alert("Por favor, completa todos los campos y acepta las políticas.");
+    button.textContent = 'Enviar';  // Restablece el texto del botón
+    button.disabled = false;  // Habilita el botón
   }
 }
+
+
+
+
+
+
+
 
 
   

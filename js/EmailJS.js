@@ -1,36 +1,28 @@
-// Inicializa EmailJS con tu User ID
-emailjs.init('CETConsulting'); // User de EmailJS
+// Inicializa EmailJS con tu Public Key
+emailjs.init('M_PnXzVM2pdJ79IgP');
 
-// Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
-    // Agrega un evento al formulario para el envío
-    document.querySelector('.contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevenir el envío predeterminado del formulario
+// Escucha el evento de envío del formulario
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita que el formulario se envíe de manera predeterminada
 
-        // Crear un objeto FormData a partir del formulario
-        const formData = new FormData(this);
+    const btn = document.querySelector('button');  // Obtiene el botón de envío
+    btn.textContent = 'Enviando...';  // Cambia el texto del botón mientras se envía el correo
 
-        // Obtener los valores del formulario
-        const data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            email: formData.get('email'),
-            message: formData.get('message'),
-            contact_method: formData.getAll('contact_method').join(', '), // Métodos de contacto seleccionados
-            offers: formData.get('offers') ? 'Sí' : 'No', // Si el checkbox está marcado, asignar 'Sí'
-            privacy: formData.get('privacy') ? 'Sí' : 'No' // Lo mismo para el checkbox de privacidad
-        };
+    // Configuración del servicio y template
+    const serviceID = 'default_service';
+    const templateID = 'template_8o0pswl';
 
-        // Enviar el formulario con EmailJS
-        emailjs.send('service_ybw5bdl', 'template_8o0pswl', data)
-            .then(function(response) {
-                alert('Correo enviado exitosamente!');
-                console.log('Success:', response);
-            }, function(error) {
-                alert('Error al enviar el correo.');
-                console.log('Error:', error);
-            });
-    });
+    // Envía el formulario con EmailJS
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.textContent = 'ENVIAR';  // Restablece el texto del botón
+            alert('Correo enviado con éxito!');
+        })
+        .catch((err) => {
+            btn.textContent = 'ENVIAR';  // Restablece el texto del botón
+            alert('Error al enviar el correo. ' + JSON.stringify(err));
+        });
 });
+
 
 
