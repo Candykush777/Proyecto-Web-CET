@@ -59,13 +59,72 @@
       color: #ffffff;
       position: relative;
       width: 100%;
-      margin-top: auto; /* Asegura que el footer se mantenga al final */
+      margin-top: auto;
     }
 
     footer a {
-      color: #4db6ac; /* Color de los enlaces en el pie de página */
+      color: #4db6ac; 
       text-decoration: none;
     }
+    /* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; 
+  }
+
+  .Beneficio {
+    padding: 15px; 
+    margin: 10px auto; 
+    max-width: 90%; 
+
+  }
+
+  .Beneficio h2 {
+    font-size: 1.5em;
+  }
+
+  .Beneficio img {
+    width: 100%; 
+  }
+
+  footer {
+    font-size: 12px; 
+    padding: 8px;
+  }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; 
+  }
+
+  .Beneficio {
+    padding: 10px; 
+    margin: 5px auto; 
+    max-width: 100%; 
+  }
+
+  .Beneficio h2 {
+    font-size: 1.2em; 
+  }
+
+  .Beneficio img {
+    width: 100%; 
+    border-radius: 5px; 
+  }
+
+  header {
+    font-size: 16px; 
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 10px; 
+    padding: 5px;
+  }
+}
+
   </style>
 </head>
 <body>

@@ -31,7 +31,6 @@ header h1 {
   left: 20px;
   transform: translateY(-50%);
   height: 100px;
-  /* Ajusta la altura del logo */
   width: auto;
 }
 
@@ -55,16 +54,12 @@ header img {
 
 nav {
   position: sticky;
-  /* Fija la barra de navegación en la parte superior */
-
   left: 0;
   width: 100%;
-  /* Ocupa todo el ancho de la página */
   background-color: #a7c3a0;
   padding: 10px;
   text-align: center;
   z-index: 1000;
-  /* Asegura que el menú esté sobre otros elementos */
 }
 
 nav a {
@@ -77,7 +72,6 @@ nav a {
 
 nav a:hover {
   background-color: #555;
-  /* padding: 10px; */
   border-radius: 5px;
 }
 
@@ -329,6 +323,8 @@ section img {
   font-weight: normal;
 
 }
+
+
 
 .btn {
   display: inline-block;
@@ -615,6 +611,8 @@ section img {
   /* Altura de línea para mayor legibilidad */
 }
 
+
+
 #contacto {
   padding: 20px;
   background-color: #e7f5e3;
@@ -857,3 +855,278 @@ h2 {
 #google-reviews a:hover {
   background-color: #4baed4;
 }
+
+/* Para pantallas de dispositivos móviles (hasta 480px) */
+@media only screen and (max-width: 480px) {
+  header {
+    height: 80px;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.3em;
+    line-height: 80px;
+  }
+
+  .logo-left, .logo-right {
+    height: 40px; /* Reducir aún más el tamaño de los logos */
+  }
+
+  nav {
+    padding: 6px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    margin: 0 8px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.4em;
+  }
+
+  .welcome-text p {
+    font-size: 0.9em;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los logos se acomoden en varias filas */
+    justify-content: center;
+    gap: 10px; /* Reducir aún más el espacio entre los logos */
+  }
+
+  .logos img {
+    max-width: 50px;  /* Ajustar más los logos */
+  }
+
+  .carousel {
+    width: 100%;
+  }
+  .carousel-text {
+    font-size: 0.9em;  /* Reducir el tamaño de la fuente en el carrusel */
+    padding: 5px;  /* Opcional: reducir el padding para hacer la burbuja más compacta */
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+
+  .carousel2 button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .carousel2 img {
+    max-width: 100%;
+  }
+
+  .colaboradores-logos {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .colaborador-logo {
+    height: 50px;
+  }
+
+  .quote-container {
+    font-size: 1.2em;
+  }
+
+  #google-reviews a {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media only screen and (max-width: 768px) {
+  header {
+    height: 100px;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    line-height: 100px;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los logos se acomoden en varias filas */
+    justify-content: center;
+    gap: 15px; /* Mantener un espacio adecuado entre los logos */
+  }
+
+  .logo-left, .logo-right {
+    height: 40px;
+    margin:  0;
+  }
+
+  nav {
+    padding: 8px;
+  }
+
+  nav a {
+    font-size: 1em;
+    margin: 0 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.6em;
+  }
+
+  .welcome-text p {
+    font-size: 1em;
+  }
+
+  .logos img {
+    max-width: 70px;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .imgcarrusel1 {
+    height: 500px;
+  }
+
+  .imgcarrusel2, .imgcarrusel3, .imgcarrusel4 {
+    height: 400px;
+  }
+
+  .carousel-text {
+    width: 90%;
+  }
+
+  .service-item img {
+    height: 120px;
+  }
+
+  .services-grid, .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-info {
+    gap: 20px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+
+  .price {
+    font-size: 1.5em;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  #blog h2 {
+    font-size: 2em;
+  }
+
+  .blog-content h3 {
+    font-size: 1.5em;
+  }
+
+  .blog-content p {
+    font-size: 0.9em;
+  }
+}
+
+/*Faltaban los carteles d elos precios del modal que saltan habian quedado demasiado grandes 
+*/
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .pidecita {
+    font-size: 20px;
+  }
+
+  .citapide {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .modal-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .pidecita {
+    font-size: 18px;
+  }
+
+  .citapide {
+    font-size: 14px;
+  }
+}
+

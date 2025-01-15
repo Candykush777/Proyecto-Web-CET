@@ -24,3 +24,22 @@
         }
     }
 
+    // Modal Coaching Grupal
+let modalGrupal = document.getElementById("grupalModal");
+let btnGrupal = document.getElementById("openGrupalModal");
+let spanGrupal = document.getElementById("closeGrupalModal");
+
+btnGrupal.onclick = function() {
+    modalGrupal.style.display = "block";
+}
+
+spanGrupal.onclick = function() {
+    modalGrupal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modalGrupal) {
+        modalGrupal.style.display = "none";
+    }
+}
+

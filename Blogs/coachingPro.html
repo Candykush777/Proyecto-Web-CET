@@ -6,83 +6,73 @@
   <meta name="description" content="Artículo sobre qué es el Coaching Profesional">
   <title>¿Qué es el Coaching Profesional?</title>
   <style>
-   html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+   
+   /* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .CoachingPro {
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 90%;
+  }
+
+  .CoachingPro img {
+    width: 100%;
+  }
+
+  .CoachingPro p, .CoachingPro ul li {
+    font-size: 14px;
+  }
+
+  .CoachingPro ul li strong {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
 
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif; 
-  background-color: #e0f7fa; 
-  display: flex;
-  flex-direction: column;
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .CoachingPro {
+    padding: 10px;
+    margin: 5px auto;
+    max-width: 100%;
+  }
+
+  .CoachingPro img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .CoachingPro p, .CoachingPro ul li {
+    font-size: 12px;
+  }
+
+  .CoachingPro ul li strong {
+    font-size: 14px;
+  }
+
+  header {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 5px;
+  }
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #004d40; 
-  color: #ffffff; 
-}
-
-.CoachingPro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #ffffff; 
-  max-width: 800px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-  flex: 1; 
-}
-
-.CoachingPro img {
-  width: 90%;
-  border-radius: 10px;
-}
-
-.CoachingPro article {
-  text-align: left;
-}
-
-.CoachingPro p {
-  font-size: 16px;
-  color: #333333;
-}
-
-.CoachingPro ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.CoachingPro ul li {
-  font-size: 16px;
-  color: #00796b; 
-  margin-bottom: 10px;
-}
-
-.CoachingPro ul li strong {
-  font-size: 18px;
-  color: #00796b; 
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #004d40;
-  color: #ffffff;
-  position: relative;
-  width: 100%;
-  margin-top: auto; 
-}
-
-footer a {
-  color: #4db6ac; 
-  text-decoration: none;
-}
 
   </style>
 </head>
