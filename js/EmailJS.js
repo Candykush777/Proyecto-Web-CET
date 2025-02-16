@@ -17,6 +17,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
         .then(() => {
             btn.textContent = 'ENVIAR';  // Restablece el texto del botón
             alert('Correo enviado con éxito!');
+             // Limpia el formulario
+             document.getElementById('form').reset();
         })
         .catch((err) => {
             btn.textContent = 'ENVIAR';  // Restablece el texto del botón
